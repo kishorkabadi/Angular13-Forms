@@ -1,7 +1,6 @@
-<a routerLink="/TemplateForms">Template Driven Forms</a><br>
-<a [routerLink]="['/ReactiveForms']">Reactive Forms</a>
+<a routerLink="/TemplateForms">Template Driven Forms</a><br/>
+<a [routerLink]="['/ReactiveForms']">Reactive Forms</a><br/>
 <a [routerLink]="['/ReactiveFormsWithValidator']">Reactive Forms With Validators</a>
-
 <h3>Reactive Forms Details</h3>
 <div class="container">
   <div class="row">
@@ -22,7 +21,7 @@
         </div>
         <br/>
        <div class="col-5">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!formDetails.valid">Submit</button>
        </div>
       </form>
     </div>

@@ -1,0 +1,30 @@
+<a routerLink="/TemplateForms">Template Driven Forms</a><br>
+<a [routerLink]="['/ReactiveForms']">Reactive Forms</a><br/>
+<a [routerLink]="['/ReactiveFormsWithValidator']">Reactive Forms With Validators</a>
+<h3>Template Driven Forms Details</h3>
+<div class="container">
+  <div class="row">
+    <div class="form-bg">
+      <form #regForm="ngForm" (ngSubmit)="Register(regForm)">
+        <div class="col-5">
+          <label for="FirstName">First Name</label>
+          <input type="text" class="form-control" name="firstName" required ngModel #firstName="ngModel"/>
+        </div>
+        <div class="col-5">
+          <label for="FirstName">Last Name</label>
+          <input type="text" class="form-control" name="lastName" required ngModel #lastName="ngModel"/>
+       </div>
+        <div class="col-5">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email"  required ngModel  #email="ngModel"/>
+          <span class="help-tpx" *ngIf="email.touched && !email.valid">Pleae enter valid email</span>
+        
+        </div>
+        <br/>
+       <div class="col-5">
+        <button type="submit" class="btn btn-primary" [disabled]="!regForm.valid">Submit</button>
+       </div>
+      </form>
+    </div>
+  </div>
+</div>
