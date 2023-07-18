@@ -9,15 +9,32 @@
         <div class="col-5">
           <label for="FirstName">First Name</label>
           <input type="text" class="form-control" formControlName="firstName" required/>
+          <span *ngIf="formDetails.controls['firstName'].hasError('required')">
+            First name required
+          </span>
+          <span *ngIf="formDetails.controls['firstName'].hasError('minlength')">
+            First name should be more than or equal to six character
+          </span>
         </div>
         <div class="col-5">
           <label for="FirstName">Last Name</label>
           <input type="text" class="form-control" formControlName="lastName" required/>
-       </div>
+          <span *ngIf="formDetails.controls['lastName'].hasError('required')">
+            Last name required
+          </span>
+          <span *ngIf="formDetails.controls['lastName'].hasError('minlength')">
+            Last name should be more than or equal to six character
+          </span>
+        </div>
         <div class="col-5">
           <label for="email">Email</label>
           <input type="email" class="form-control" formControlName="email" required/>
-        
+          <span *ngIf="formDetails.controls['email'].hasError('required')">
+            email required
+          </span>
+          <span *ngIf="formDetails.controls['email'].hasError('email')">
+            please enter valid email
+          </span>
         </div>
         <br/>
        <div class="col-5">
