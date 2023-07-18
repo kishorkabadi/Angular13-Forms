@@ -30,6 +30,15 @@ export class ReactiveFormWithValidatorsComponent {
   {}
   submitFormData(regForm:any)
   {
+    console.log(regForm.get('firstName').value);
     console.log(regForm.controls);
+  }
+  GetFirstName()
+  {
+    
+  }
+  ResetForm()
+  {
+    this.formDetails.reset();
   }
 }

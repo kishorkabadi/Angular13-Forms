@@ -38,8 +38,10 @@
         </div>
         <br/>
        <div class="col-5">
-        <button type="submit" class="btn btn-primary" [disabled]="!formDetails.valid">Submit</button>
-       </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!formDetails.valid">Submit</button>&nbsp;
+        <button type="button" class="btn btn-primary" [disabled]="!formDetails.valid" (click)="GetFirstName()">Get First Name</button> &nbsp;
+        <button type="button" class="btn btn-primary" [disabled]="!formDetails.valid" (click)="ResetForm()">Reset</button> 
+      </div>
       </form>
     </div>
   </div>
